@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/all.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <title>Resume</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h2 class="text-center alert alert-info mt-3">Resume Uploader</h2>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center alert alert-success mt-3 ">Seeker Details</h2>
+                <div class="shadow p-4 mb-5 bg-body-tertiary rounded">
+                    <h4>Application No:{{fm.id}}</h4>
+                    <img src="{{fm.img.url}}" alt="" class="img-fluid img-thumbnail mt-2" width="150" height="150">
+
+                    <p>Name:{{fm.name}}</p>
+                    <p>DOB:{{fm.dob}}</p>
+                    <p>gender:{{fm.gender}}</p>
+                    <p>email:{{fm.email}}</p>
+                    <p>address:{{fm.address}}</p>
+                    <p>city:{{fm.city}}</p>
+                    <p>pin:{{fm.pin}}</p>
+                    <p>state:{{fm.state}}</p>
+                    <p>mob:{{fm.mob}}</p>
+                    <p>loc:{{fm.loc}}</p>
+                    <p>Attachment:<a href="{{fm.res.url}}">Download file</a></p>
+                    <a href="/" class="btn btn-danger">Back to HOME</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static "all.min.js" %}"></script>
+    <script src="{% static "bootstrap.min.js" %}"></script>
+    <script src="{% static "jquery.js" %}"></script>
+    <script src="{% static "popper.js" %}"></script>
+</body>
+</html>
